@@ -45,6 +45,7 @@
             buttonDivide = new Button();
             buttonTotal = new Button();
             label1 = new Label();
+            buttonClearAll = new Button();
             SuspendLayout();
             // 
             // button1
@@ -232,11 +233,23 @@
             label1.Text = " ";
             label1.Click += label1_Click;
             // 
+            // buttonClearAll
+            // 
+            buttonClearAll.Font = new Font("Segoe UI", 20F);
+            buttonClearAll.Location = new Point(631, 144);
+            buttonClearAll.Name = "buttonClearAll";
+            buttonClearAll.Size = new Size(98, 259);
+            buttonClearAll.TabIndex = 17;
+            buttonClearAll.Text = "CA";
+            buttonClearAll.UseVisualStyleBackColor = true;
+            buttonClearAll.Click += buttonClearAll_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonClearAll);
             Controls.Add(label1);
             Controls.Add(buttonTotal);
             Controls.Add(buttonDivide);
@@ -279,5 +292,6 @@
         private Button buttonDivide;
         private Button buttonTotal;
         private Label label1;
+        private Button buttonClearAll;
     }
 }

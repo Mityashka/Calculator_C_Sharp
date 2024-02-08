@@ -68,7 +68,6 @@ namespace WinFormsApp2
         {
             a = Convert.ToInt32(textBoxOtvet.Text);
             textBoxOtvet.Clear();
-            label1.Text = a.ToString() + "+";
             type = 1;
         }
 
@@ -76,7 +75,6 @@ namespace WinFormsApp2
         {
             a = Convert.ToInt32(textBoxOtvet.Text);
             textBoxOtvet.Clear();
-            label1.Text = a.ToString() + "-";
             type = 2;
         }
 
@@ -84,7 +82,6 @@ namespace WinFormsApp2
         {
             a = Convert.ToInt32(textBoxOtvet.Text);
             textBoxOtvet.Clear();
-            label1.Text = a.ToString() + "*";
             type = 3;
         }
 
@@ -92,7 +89,6 @@ namespace WinFormsApp2
         {
             a = Convert.ToInt32(textBoxOtvet.Text);
             textBoxOtvet.Clear();
-            label1.Text = a.ToString() + "/";
             type = 4;
         }
 
@@ -110,7 +106,10 @@ namespace WinFormsApp2
         private void label1_Click(object sender, EventArgs e)
         {
         }
-
+        private void buttonClearAll_Click(object sender, EventArgs e)
+        {
+            textBoxOtvet.Text = null;
+        }
         public void calculator()
         {
             switch (type)
@@ -127,5 +126,6 @@ namespace WinFormsApp2
             }
             textBoxOtvet.Text = otvet.ToString(); // Показываем результат
         }
+
     }
 }
